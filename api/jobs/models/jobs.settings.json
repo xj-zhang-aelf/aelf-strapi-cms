@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "name": "jobs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "lang": {
+      "type": "string"
+    },
+    "send_date": {
+      "type": "date"
+    },
+    "job_requires": {
+      "type": "richtext"
+    },
+    "job_states": {
+      "type": "richtext"
+    },
+    "name": {
+      "type": "string"
+    },
+    "open": {
+      "type": "boolean"
+    },
+    "jobs_type": {
+      "via": "type",
+      "model": "jobs-type"
+    }
+  }
+}

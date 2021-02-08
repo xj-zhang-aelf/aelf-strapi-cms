@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs_types",
+  "info": {
+    "name": "JobsType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "primary_key": {
+      "type": "enumeration",
+      "enum": [
+        "test",
+        "pro"
+      ],
+      "required": true,
+      "unique": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "collection": "jobs",
+      "via": "jobs_type"
+    }
+  }
+}
